@@ -1,12 +1,9 @@
-import puppeteer from 'puppeteer'; //Lllamo a puppeteer
-
-//Creo una funcion
-async function openWebPage(){
-    //Inicializo puppeteer, osea declaro una instancia de esta
-    //Esta es asincrona
-    const browser = await puppeteer.launch();
-    //
-    const page = await browser.newPage();
+import { mlScrap } from './Service/service.js';
+import { googleScrap, googleSimpleScrap } from './Service/GoogleService.js';
 
 
-}
+// googleSimpleScrap('https://www.google.com/maps/search/constructora/@-33.4853056,-70.5930901,14630m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D');
+// googleScrap('https://www.google.com/maps/search/constructora/@-33.4853056,-70.5930901,14630m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D');
+
+//Tratare de scrapear mercado libre
+mlScrap()
